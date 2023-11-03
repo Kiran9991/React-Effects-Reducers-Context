@@ -12,11 +12,11 @@ const Login = (props) => {
   const [formIsValid, setFormIsValid] = useState(false);
 
   const emailChangeHandler = (event) => {
-    setEnteredEmail(event.target.value);
-
     setFormIsValid(
-      event.target.value.includes('@') && enteredPassword.trim().length > 6
+      enteredEmail.includes('@') && enteredPassword.trim().length > 6
     );
+
+    setEnteredEmail(event.target.value);
   };
 
   const passwordChangeHandler = (event) => {
