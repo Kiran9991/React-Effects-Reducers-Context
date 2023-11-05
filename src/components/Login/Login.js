@@ -3,6 +3,7 @@ import React, { useEffect, useState, useReducer } from "react";
 import Card from "../UI/Card/Card";
 import classes from "./Login.module.css";
 import Button from "../UI/Button/Button";
+import Input from "../Inputs/Input";
 
 const emailReducer = (state, action) => {
   if(action.type === 'USER_INPUT') {
@@ -93,9 +94,9 @@ const Login = (props) => {
           }`}
         >
           <label htmlFor="email">E-Mail</label>
-          <input
-            type="email"
-            id="email"
+          <Input
+            type={"email"}
+            id={"email"}
             value={emailState.value}
             onChange={emailChangeHandler}
             onBlur={validateEmailHandler}
@@ -107,9 +108,9 @@ const Login = (props) => {
           }`}
         >
           <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
+          <Input
+            type={"password"}
+            id={"password"}
             value={passwordState.value}
             onChange={passwordChangeHandler}
             onBlur={validatePasswordHandler}
